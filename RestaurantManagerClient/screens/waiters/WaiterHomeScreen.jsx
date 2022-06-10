@@ -1038,7 +1038,7 @@ class WaiterHomeScreen extends React.Component {
                 index: this.state.tabIndex,
                 routes: [
                   { key: 'orderWaitHandle', title: 'Chờ xử lý' },
-                  { key: 'orderDoing', title: 'Giao hàng' }
+                  { key: 'orderDoing', title: 'Đang giao hàng' }
                 ]
               }}
               renderScene={this.renderScene}

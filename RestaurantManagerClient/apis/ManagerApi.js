@@ -1,5 +1,5 @@
 //server
-const host = 'http://3.1.221.73';
+const host = 'http://13.213.49.35';
 const port = '9000';
 const loginUrl = '/api/login';
 //warehouse
@@ -9,7 +9,7 @@ const warehouseDeleteUrl = '/warehouse/delete/';
 const warehouseUpdateUrl = '/warehouse/update/';
 const warehouseSearchUrl = '/warehouse/search?';
 //userrole
-const roleListUrl = '/userrole/'
+const roleListUrl = '/userrole/';
 const roleAddUrl = '/userrole/add';
 const roleDeleteUrl = '/userrole/delete/';
 const roleUpdateUrl = '/userrole/update/';

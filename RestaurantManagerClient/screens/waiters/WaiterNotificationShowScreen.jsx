@@ -94,7 +94,7 @@ class WaiterNotificationShowScreen extends React.Component {
                         () => {
                             var getNotification = [];
                             for (const element of dataJson) {
-                                if (element.detail == 'Phòng phục vụ đã nhận một đơn hàng mới' && element.status == false) {
+                                if ((element.detail == 'Phòng phục vụ đã nhận một đơn hàng mới' && element.status == false)||(element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false)) {
                                     getNotification.push(element);
                                 }
                                 getNotification.sort(function (a, b) {
@@ -131,7 +131,7 @@ class WaiterNotificationShowScreen extends React.Component {
                     () => {
                         var getNotification = [];
                         for (const element of dataJson) {
-                            if (element.detail == 'Phòng phục vụ đã nhận một đơn hàng mới' && element.status == false) {
+                            if ((element.detail == 'Phòng phục vụ đã nhận một đơn hàng mới' && element.status == false)||(element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false)) {
                                 getNotification.push(element);
                             }
                             getNotification.sort(function (a, b) {

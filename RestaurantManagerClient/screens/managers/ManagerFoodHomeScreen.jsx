@@ -598,8 +598,8 @@ class ManagerFoodHomeScreen extends React.Component {
               var i = 0;
               var getNewOrder = [];
               for (const element_or of element.orders) {
-                  getNewOrder.push(element_or);
-                
+                getNewOrder.push(element_or);
+
               }
 
               getNewOrder.sort(function (a, b) {
@@ -671,7 +671,79 @@ class ManagerFoodHomeScreen extends React.Component {
 
 
 
+  temporaryOrder() {
+    if ((this.state.dataSingleOrder.status != 'Đang thanh toán')&&(this.state.dataSingleOrder.status != 'Đang tạm tính')) {
+      Alert.alert(
+        "Thông báo",
+        "Vui lòng chọn đơn hàng khác vì đơn hàng vẫn đang được xử lý",
+        [
+          {
+            text: "Đóng",
+            onPress: () => { },
+          }
+        ]
+      );
+      return;
+    }
 
+
+    if (this.state.dataSingleOrder.status == 'Đã giao hàng') {
+      Alert.alert(
+        "Thông báo",
+        "Xác nhận tạm tính đơn hàng?",
+        [
+          {
+            text: "Đóng",
+            onPress: () => { }
+          },
+          {
+            text: "Đồng ý", onPress: () => {
+
+
+              fetch(host + ':' + port + orderUpdateUrl + this.state.dataSingleOrder.id, {
+                method: 'PUT',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer ' + this.props.user.token,
+                },
+                body: JSON.stringify({
+
+                  type: this.state.dataSingleOrder.type,
+                  status: 'Đang tạm tính',
+                  vat: this.state.dataSingleOrder.vat,
+                  time: this.state.dataSingleOrder.time
+
+                }),
+              })
+                .then(response => response.text())
+                .then(data => {
+                  console.log(data);
+                  this.componentDidMount();
+
+                  var getOrder = this.state.dataSingleOrder;
+                  getOrder.status = 'Đang tạm tính';
+                  this.setState({ dataSingleOrder: getOrder });
+
+
+                })
+                .catch((error) => {
+
+                  console.log(error);
+
+                });
+
+
+            }
+          }
+        ]
+      );
+
+    }
+    if(this.state.dataSingleOrder.status=='Đang tạm tính'){
+      this.setState({modalPayment:true});
+    }
+  }
 
 
   paymentOrder() {
@@ -870,8 +942,8 @@ class ManagerFoodHomeScreen extends React.Component {
                 var getNewOrder = [];
                 for (const element_or of element.orders) {
 
-                    getNewOrder.push(element_or);
-                  
+                  getNewOrder.push(element_or);
+
                 }
 
                 getNewOrder.sort(function (a, b) {
@@ -1096,7 +1168,7 @@ class ManagerFoodHomeScreen extends React.Component {
       return;
     }
     for (const element of getOrderDishFoodList) {
-      if (element.id == getOrderDish.id && getOrderDish.dish.food.name==element.dish.food.name) {
+      if (element.id == getOrderDish.id && getOrderDish.dish.food.name == element.dish.food.name) {
         Alert.alert(
           "Thông báo",
           "Vui lòng chọn món ăn khác vì đã có sẵn trong giỏ hàng",
@@ -1366,7 +1438,7 @@ class ManagerFoodHomeScreen extends React.Component {
         if (element.CategoryType) {
 
           //for (const element_s of element.dish.food.resources) {
-           // this.minusResourceQuantityIntoWareHouse(element_s.id.resource_id, element_s.quantity);
+          // this.minusResourceQuantityIntoWareHouse(element_s.id.resource_id, element_s.quantity);
           //}
 
 
@@ -1841,7 +1913,7 @@ class ManagerFoodHomeScreen extends React.Component {
         },
         {
           text: "Đồng ý", onPress: () => {
-            this.setState({ flagDiningTable: true, flagDiningTableDetail: true });
+            this.setState({ statusUseDiningTableAdd: false, flagDiningTable: true, flagDiningTableDetail: true });
             fetch(host + ':' + port + diningTableAddorderDiningTableUrl, {
               method: 'POST',
               headers: {
@@ -1925,8 +1997,8 @@ class ManagerFoodHomeScreen extends React.Component {
           var i = 0;
           var getNewOrder = [];
           for (const element_or of element.orders) {
-              getNewOrder.push(element_or);
-            
+            getNewOrder.push(element_or);
+
           }
 
           getNewOrder.sort(function (a, b) {
@@ -2910,7 +2982,7 @@ class ManagerFoodHomeScreen extends React.Component {
 
           <View style={ManagerFoodHomeStyle.setupItemCenterContainer}>
 
-            <TouchableOpacity onPress={() => { this.setState({ modalPayment: true }); }} >
+            <TouchableOpacity onPress={() => { this.temporaryOrder(); }} >
               <Image
                 style={ManagerFoodHomeStyle.cancelButton}
                 source={require('./../../assets/dollar.png')}
@@ -2970,7 +3042,7 @@ class ManagerFoodHomeScreen extends React.Component {
           <Text></Text>
           <View style={ManagerFoodHomeStyle.setupItemCenterContainer}>
 
-            <TouchableOpacity onPress={() => { this.setState({ modalPayment: true }); }} >
+            <TouchableOpacity onPress={() => { this.temporaryOrder(); }} >
               <Image
                 style={ManagerFoodHomeStyle.cancelButton}
                 source={require('./../../assets/dollar.png')}
@@ -3028,7 +3100,7 @@ class ManagerFoodHomeScreen extends React.Component {
           <Text></Text>
           <View style={ManagerFoodHomeStyle.setupItemCenterContainer}>
 
-            <TouchableOpacity onPress={() => { this.setState({ modalPayment: true }); }} >
+            <TouchableOpacity onPress={() => { this.temporaryOrder(); }} >
               <Image
                 style={ManagerFoodHomeStyle.cancelButton}
                 source={require('./../../assets/dollar.png')}
@@ -3075,7 +3147,7 @@ class ManagerFoodHomeScreen extends React.Component {
     var i = 0;
     for (const element of item.orders) {
 
-        getOrderOfDiningTable.push(element);
+      getOrderOfDiningTable.push(element);
     }
     getOrderOfDiningTable.sort(function (a, b) {
       a = new Date(a.order.time);
@@ -3833,7 +3905,7 @@ class ManagerFoodHomeScreen extends React.Component {
               <Text></Text>
               <View style={ManagerFoodHomeStyle.setupItemCenterContainer}>
 
-                <TouchableOpacity onPress={() => { this.setState({ statusUseDiningTableAdd: false, statusBlankDiningTable: false, statusUseDiningTable: true, status: 'orderdetails' }); }} >
+                <TouchableOpacity onPress={() => { this.setState({ statusUseDiningTableAdd: false, statusBlankDiningTable: false, statusUseDiningTable: true, status: 'orderdetails' }); this.componentDidMount(); }} >
                   <Image
                     style={ManagerFoodHomeStyle.cancelButton}
                     source={require('./../../assets/previous.png')}

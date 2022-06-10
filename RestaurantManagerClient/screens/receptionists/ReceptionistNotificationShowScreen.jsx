@@ -94,7 +94,7 @@ class ReceptionistReceptionistNotificationScreen extends React.Component {
                     () => {
                         var getNotification = [];
                         for (const element of dataJson) {
-                            if (element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false) {
+                            if (element.detail == 'Quầy thu ngân nhận được một yêu cầu thanh toán mới' && element.status == false) {
                                 getNotification.push(element);
                             }
                             getNotification.sort(function (a, b) {
@@ -129,7 +129,7 @@ class ReceptionistReceptionistNotificationScreen extends React.Component {
                         () => {
                             var getNotification = [];
                             for (const element of dataJson) {
-                                if (element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false) {
+                                if (element.detail == 'Quầy thu ngân nhận được một yêu cầu thanh toán mới' && element.status == false) {
                                     getNotification.push(element);
                                 }
                                 getNotification.sort(function (a, b) {

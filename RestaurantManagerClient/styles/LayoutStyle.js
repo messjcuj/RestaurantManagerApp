@@ -2862,7 +2862,7 @@ const ChefHomeStyle = StyleSheet.create({
     borderRadius: 20,
     width: '100%',
     height: windowHeight / 1.2
-  },
+  }
 });
 ////////
 const ChefNotificationStyle = StyleSheet.create({
@@ -3386,7 +3386,279 @@ const WaiterHomeStyle = StyleSheet.create({
     borderRadius: 20,
     width: '100%',
     height: windowHeight / 1.2
+  }
+});
+////////
+const WaiterOrderStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#184785',
+    justifyContent: 'center',
   },
+  topcontainer: {
+  },
+  setupItemCenterContainer: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'center',
+
+  },
+  bottomcontainer: {
+    paddingTop: '5%',
+    height: '95%',
+    marginLeft: '2%',
+    marginRight: '2%',
+    borderRadius: 15,
+    backgroundColor: '#103667',
+    marginTop: '18%',
+  },
+  bottomofadddiningtablecontainer: {
+    paddingTop: '5%',
+    height: '85%',
+    marginLeft: '2%',
+    marginRight: '2%',
+    borderRadius: 15,
+    backgroundColor: '#103667',
+    marginTop: '18%',
+  },
+  cart: {
+    width: windowWidth / 7,
+    height: windowWidth / 7,
+    marginBottom: '2%',
+    marginLeft: '80%'
+  },
+  item: {
+    flexDirection: 'row-reverse',
+    backgroundColor: '#EEEEEE',
+    padding: '3%',
+    margin: '2%',
+    borderColor: 'white',
+    borderRadius: 10
+
+  },
+  logo: {
+    width: windowWidth / 7,
+    height: windowWidth / 7,
+    margin: '2%'
+  },
+  itemMenu: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: '5%',
+    margin: '2%',
+    height: windowWidth / 3.5,
+    width: windowWidth / 3.5,
+    justifyContent: 'center',
+    alignItems: 'center'
+
+  },
+
+  itemMenuContainerTouchable: {
+    padding: '2%'
+  },
+  itemMenuContainerTouchableContent: {
+    justifyContent: 'center',
+    flexDirection: 'row-reverse'
+  },
+  itemMenuContainerTouchableContentFoodType: {
+    justifyContent: 'flex-end',
+    flexDirection: 'row-reverse'
+  },
+  itemMenuTitle: {
+    fontWeight: 'bold',
+    fontSize: windowWidth / 28,
+    color: 'black'
+  },
+  itemDetailList: {
+    backgroundColor: '#EEEEEE',
+    padding: '2%',
+    margin: '2%',
+    height: windowWidth / 3.8,
+    width: '95%',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: 'row-reverse',
+  },
+  itemDiningTableDetailList: {
+    backgroundColor: '#EEEEEE',
+    padding: '2%',
+    margin: '2%',
+    height: windowWidth / 4.5,
+    width: '95%',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: 'row-reverse',
+  },
+  itemDetailListPlus: {
+    width: windowWidth / 10,
+    height: windowWidth / 10
+  },
+  itemDetailListLogo: {
+    width: windowWidth / 5,
+    height: windowWidth / 5,
+    borderRadius: 10,
+    marginLeft: '5%'
+  },
+  itemDiningTableDetailListLogo: {
+    width: windowWidth / 5.5,
+    height: windowWidth / 5.5,
+    borderRadius: 10,
+    marginLeft: '5%'
+  },
+  itemDetailListTitle: {
+    fontWeight: 'bold',
+    fontSize: windowWidth / 28,
+  },
+  title: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: windowWidth / 28,
+    marginLeft: '5%'
+  },
+  itemDetailOrderListContainer: {
+    marginTop: '10%',
+    height: '90%',
+    left: '2%',
+    right: '2%',
+    position: 'absolute',
+    backgroundColor: '#103667',
+    justifyContent: 'center',
+    paddingBottom: '5%',
+    paddingRight: '2%',
+    paddingLeft: '2%',
+    borderRadius: 20
+  },
+  itemDetailOrderListExtraContainer: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'center',
+    alignContent: 'center'
+
+  },
+  itemDetailOrderList: {
+    backgroundColor: '#EEEEEE',
+    padding: 20,
+    margin: 10,
+    height: windowWidth / 3,
+    width: '95%',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: 'row-reverse',
+  },
+  itemDetailOrderCartList: {
+    backgroundColor: '#EEEEEE',
+    padding: 20,
+    margin: 10,
+    height: windowWidth / 2.4,
+    width: '95%',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 10,
+    flexDirection: 'row-reverse',
+  },
+  itemDetailOrderListPlus: {
+    width: windowWidth / 13,
+    height: windowWidth / 13
+  },
+  itemDetailOrderListLogo: {
+    width: windowWidth / 4,
+    height: windowWidth / 4,
+    borderRadius: 10,
+    marginLeft: '5%'
+  },
+  itemDetailOrderListTitle: {
+    fontWeight: 'bold',
+    fontSize: windowWidth / 28,
+  },
+  itemDetailOrderListnextButton: {
+    width: windowWidth / 10,
+    height: windowWidth / 10,
+  },
+  itemDetailOrderListpreviousButton: {
+    width: windowWidth / 10,
+    height: windowWidth / 10,
+    marginLeft: '15%',
+  },
+  completeContainer: {
+    marginTop: '10%',
+    height: '90%',
+    left: '2%',
+    right: '2%',
+    position: 'absolute',
+    backgroundColor: '#103667',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: '5%',
+    paddingRight: '2%',
+    paddingLeft: '2%',
+    borderRadius: 20
+  },
+  completeLogo: {
+    width: windowWidth / 5,
+    height: windowWidth / 5
+  },
+  completeTitle: {
+    fontWeight: 'bold',
+    fontSize: windowWidth / 25,
+    color: 'white'
+  },
+  completeText: {
+    color: 'white',
+    fontSize: windowWidth / 30
+  },
+  saveButton: {
+    width: windowWidth / 10,
+    height: windowWidth / 10,
+  },
+  cancelButton: {
+    width: windowWidth / 10,
+    height: windowWidth / 10,
+  },
+  error: {
+    fontSize: windowWidth / 28,
+    color: '#FF6633'
+  },
+  drawercontentprofilecontainer: {
+    marginBottom: '5%'
+  },
+  drawerContentProfileContainerLeft: {
+    flex: 1, marginLeft: '6%'
+  },
+  drawerContentProfileContainerLeftLogo: {
+    height: windowWidth / 8,
+    width: windowWidth / 8,
+    borderColor: 'white',
+    marginTop: '5%'
+  },
+  drawerContentProfileContainerRight: {
+    marginLeft: '30%'
+  },
+  drawerContentProfileContainerRightTitle: {
+    color: 'white',
+    fontSize: windowWidth / 30,
+    fontWeight: 'bold'
+  },
+  drawerContentProfileContainerRightText: {
+    color: 'white',
+    fontSize: windowWidth / 33,
+    color: '#DDDDDD'
+  },
+  drawerItemListContainer: {
+    backgroundColor: 'white',
+    flex: 1
+  },
+  drawerLogoutContainer: {
+    borderTopWidth: 1,
+    borderColor: '#B7B7B7'
+  },
+  drawerLogoutContainerTouchable: {
+    backgroundColor: 'white',
+    padding: 20
+  },
+  drawerLogoutContainerTouchableContent: {
+    flexDirection: 'row-reverse'
+  }
 });
 ////////
 const WaiterNotificationStyle = StyleSheet.create({
@@ -4535,70 +4807,31 @@ const ReceptionistOrderStyle = StyleSheet.create({
     flex: 1,
     backgroundColor: '#184785',
     justifyContent: 'center',
-    height: '10%'
   },
   topcontainer: {
-    width: '100%',
-    flexDirection: 'row-reverse'
-  },
-  centercontainer: {
-    backgroundColor: 'white',
-    padding: '2%',
-    marginTop: '13%',
-    borderRadius: 20,
-    left: '2%',
-    right: '2%',
     position: 'absolute',
-    height: windowHeight / 1.5
-
+    width: '100%',
+    flexDirection: 'row-reverse',
   },
   setupItemCenterContainer: {
     flexDirection: 'row-reverse',
     justifyContent: 'center',
 
   },
-  setupImageCenterContainer: {
-    width: windowWidth / 2,
-    height: windowWidth / 2,
-    margin: '2%'
+  bottomcontainer: {
+    paddingTop: '5%',
+    height: '86%',
+    marginLeft: '2%',
+    marginRight: '2%',
+    borderRadius: 15,
+    backgroundColor: '#103667',
+    marginTop: '18%',
   },
-  searchContainer: {
-    padding: '3%',
-    flex: 1,
-    backgroundColor: 'white',
-    borderRadius: 20
-  },
-  addExtraItemContainer: {
-    position: 'absolute',
-    padding: '3%',
-    backgroundColor: '#184785',
-    borderRadius: 20,
-    width: '100%',
-    height: windowHeight / 1.2
-  },
-  title: {
-    color: 'black',
-    fontSize: windowWidth / 25,
-    margin: '2%',
-  },
-  titleResourceDrink: {
-    color: 'white',
-    fontSize: windowWidth / 25,
-    margin: '2%',
-  },
-  Input: {
-
-  },
-  plus: {
+  cart: {
     width: windowWidth / 7,
     height: windowWidth / 7,
     marginBottom: '2%',
-  },
-  plusContainer: {
-    flexDirection: 'row-reverse',
-    padding: '3%',
-    margin: '2%'
-
+    marginLeft: '80%'
   },
   item: {
     flexDirection: 'row-reverse',
@@ -4614,103 +4847,6 @@ const ReceptionistOrderStyle = StyleSheet.create({
     height: windowWidth / 7,
     margin: '2%'
   },
-  icon: {
-    width: windowWidth / 15,
-    height: windowWidth / 15,
-    marginLeft: '2%',
-  },
-  lottie: {
-    width: windowWidth / 5,
-    height: windowWidth / 5
-  },
-  error: {
-    fontSize: windowWidth / 28,
-    color: '#FF6633'
-  },
-  setupItem: {
-    marginTop: '5%',
-    left: '2%',
-    right: '2%',
-    position: 'absolute',
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    paddingBottom: '5%',
-    paddingRight: '2%',
-    paddingLeft: '2%',
-    borderRadius: 20,
-    height: windowHeight / 1.5
-  },
-  setupItemCenterContainer: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'center',
-
-  },
-  saveButton: {
-    width: windowWidth / 10,
-    height: windowWidth / 10,
-  },
-  cancelButton: {
-    width: windowWidth / 10,
-    height: windowWidth / 10,
-  },
-  setupItemCenterContainerRow: {
-    left: '5%',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row-reverse',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-end'
-  },
-  setupItemCenterContainerRowText: {
-    fontSize: windowWidth / 28,
-    marginRight: '5%'
-  },
-  setupItemCenterContainerRowOption: {
-    flex: 1,
-    marginBottom: '2%'
-  },
-  itemMenuTitle: {
-    fontWeight: 'bold',
-    fontSize: windowWidth / 28,
-    color: 'black'
-  },
-  itemMenuContainerTouchable: {
-    padding: '2%'
-  },
-  itemMenuContainerTouchableContent: {
-    justifyContent: 'center',
-    flexDirection: 'row-reverse'
-  },
-  itemMenuContainerTouchableContentFoodType: {
-    justifyContent: 'flex-end',
-    flexDirection: 'row-reverse'
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#184785',
-    justifyContent: 'center',
-  },
-  setupItemCenterContainer: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'center',
-
-  },
-  bottomcontainer: {
-    paddingTop: '5%',
-    height: '95%',
-    marginLeft: '2%',
-    marginRight: '2%',
-    borderRadius: 15,
-    backgroundColor: '#103667',
-    marginTop: '18%',
-  },
-  cart: {
-    width: windowWidth / 7,
-    height: windowWidth / 7,
-    marginBottom: '2%',
-    marginLeft: '80%'
-  },
-
   itemMenu: {
     backgroundColor: 'white',
     borderRadius: 10,
@@ -4873,6 +5009,59 @@ const ReceptionistOrderStyle = StyleSheet.create({
     fontSize: windowWidth / 28,
     color: '#FF6633'
   },
+  drawercontentprofilecontainer: {
+    marginBottom: '5%'
+  },
+  drawerContentProfileContainerLeft: {
+    flex: 1, marginLeft: '6%'
+  },
+  drawerContentProfileContainerLeftLogo: {
+    height: windowWidth / 8,
+    width: windowWidth / 8,
+    borderColor: 'white',
+    marginTop: '5%'
+  },
+  drawerContentProfileContainerRight: {
+    marginLeft: '30%'
+  },
+  drawerContentProfileContainerRightTitle: {
+    color: 'white',
+    fontSize: windowWidth / 30,
+    fontWeight: 'bold'
+  },
+  drawerContentProfileContainerRightText: {
+    color: 'white',
+    fontSize: windowWidth / 33,
+    color: '#DDDDDD'
+  },
+  drawerItemListContainer: {
+    backgroundColor: 'white',
+    flex: 1
+  },
+  drawerLogoutContainer: {
+    borderTopWidth: 1,
+    borderColor: '#B7B7B7'
+  },
+  drawerLogoutContainerTouchable: {
+    backgroundColor: 'white',
+    padding: 20
+  },
+  drawerLogoutContainerTouchableContent: {
+    flexDirection: 'row-reverse'
+  },
+  titleResourceDrink: {
+    color: 'white',
+    fontSize: windowWidth / 25,
+    margin: '2%',
+  },
+  addExtraItemContainer: {
+    position: 'absolute',
+    padding: '3%',
+    backgroundColor: '#184785',
+    borderRadius: 20,
+    width: '100%',
+    height: windowHeight / 1.2
+  }
 });
 
 ////////
@@ -5307,6 +5496,7 @@ export {
   WaiterHomeStyle,
   WaiterNotificationStyle,
   WaiterPaymentStyle,
+  WaiterOrderStyle,
   ReceptionistHomeStyle,
   ReceptionistNotificationStyle,
   ReceptionistOrderStyle

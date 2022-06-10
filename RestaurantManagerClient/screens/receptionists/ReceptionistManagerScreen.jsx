@@ -54,7 +54,7 @@ class ReceptionistManagerScreen extends React.Component {
             () => {
               var getNotification=[];
               for(const element of dataJson){
-                if (element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false){
+                if (element.detail == 'Quầy thu ngân nhận được một yêu cầu thanh toán mới' && element.status == false) {
                   getNotification.push(element);
                 }
               }
@@ -91,7 +91,7 @@ class ReceptionistManagerScreen extends React.Component {
           () => {
             var getNotification=[];
             for(const element of dataJson){
-              if (element.detail == 'Nhà bếp đã xác nhận đơn hàng' && element.status == false){
+              if (element.detail == 'Quầy thu ngân nhận được một yêu cầu thanh toán mới' && element.status == false) {
                 getNotification.push(element);
               }
             }
@@ -141,7 +141,7 @@ class ShowLeftTab extends React.Component {
   render() {
     return (
       <Drawer.Navigator useLegacyImplementation drawerContent={(props) => <CustomDrawerContent {...props} />}>
-        <Drawer.Screen name="Đơn hàng" component={ReceptionistHomeScreen} />
+        <Drawer.Screen name="Đơn hàng" component={ReceptionistOrderScreen} />
       </Drawer.Navigator>
     );
   }

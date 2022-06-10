@@ -3515,69 +3515,6 @@ class ReceptionistHomeScreen extends React.Component {
                     keyboardType='default' />
                 </View>
                 <View style={ReceptionistHomeStyle.bottomcontainer}>
-
-                  <View>
-
-
-                    <View style={ReceptionistHomeStyle.itemMenuContainerTouchable}>
-                      <View style={ReceptionistHomeStyle.itemMenuContainerTouchableContent}>
-
-                        <TouchableOpacity
-                          style={{
-                            backgroundColor: this.state.colorBackgroundBlankDiningTable,
-                            borderRadius: 10,
-                            padding: 15,
-                            margin: 10,
-                            height: this.state.windowWidth / 4.2,
-                            width: this.state.windowWidth / 4.2,
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                          }}
-                          onPress={() => { this.optionSetUpBlankDiningTable(); }}
-                        >
-                          <Image
-                            style={{ width: '100%', height: '100%', borderRadius: 100 }}
-                            source={require('./../../assets/blankDiningTable.png')}
-                          />
-                          <Text style={ReceptionistHomeStyle.itemMenuTitle}>Trống</Text>
-
-
-                        </TouchableOpacity>
-                        <Text>          </Text>
-                        <TouchableOpacity
-                          style={{
-                            backgroundColor: this.state.colorBackgroundUseDiningTable,
-                            borderRadius: 10,
-                            padding: 15,
-                            margin: 10,
-                            height: this.state.windowWidth / 4.2,
-                            width: this.state.windowWidth / 4.2,
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                          }}
-                          onPress={() => { this.optionSetUpUseDiningTable(); }}
-                        >
-                          <Image
-                            style={{ width: '100%', height: '100%', borderRadius: 100 }}
-                            source={require('./../../assets/useDiningTable.png')}
-                          />
-                          <Text style={ReceptionistHomeStyle.itemMenuTitle}>Đã đặt</Text>
-
-                        </TouchableOpacity>
-
-
-
-
-
-                      </View>
-
-                    </View>
-
-
-                  </View>
-
-
-
                   <View style={ReceptionistHomeStyle.itemMenuContainerTouchable}>
                     <View style={ReceptionistHomeStyle.itemMenuContainerTouchableContentFoodType}>
 
@@ -3832,7 +3769,7 @@ class ReceptionistHomeScreen extends React.Component {
               <Text></Text>
               <View style={ReceptionistHomeStyle.setupItemCenterContainer}>
 
-                <TouchableOpacity onPress={() => { this.setState({ statusUseDiningTableAdd: false, statusBlankDiningTable: false, statusUseDiningTable: true, status: 'orderdetails' }); }} >
+                <TouchableOpacity onPress={() => { this.setState({ statusUseDiningTableAdd: false, statusBlankDiningTable: false, statusUseDiningTable: true, status: 'orderdetails' });this.componentDidMount(); }} >
                   <Image
                     style={ReceptionistHomeStyle.cancelButton}
                     source={require('./../../assets/previous.png')}

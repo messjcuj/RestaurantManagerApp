@@ -15,7 +15,7 @@ import { host, port, notificationListUrl } from '../../apis/ManagerApi';
 import { connect } from 'react-redux';
 import { store } from '../../configs/ReduxStore';
 import WaiterHomeScreen from './WaiterHomeScreen';
-import WaiterPaymentScreen from './WaiterPaymentScreen';
+import WaiterOrderScreen from './WaiterOrderScreen';
 
 
 
@@ -142,8 +142,8 @@ class ShowLeftTab extends React.Component {
   render() {
     return (
       <Drawer.Navigator useLegacyImplementation drawerContent={(props) => <CustomDrawerContent {...props} />}>
-        <Drawer.Screen name="Đơn hàng" component={WaiterHomeScreen} />
-        <Drawer.Screen name="Tạm tính" component={WaiterPaymentScreen} />
+        <Drawer.Screen name="Đơn hàng" component={WaiterOrderScreen} />
+        <Drawer.Screen name="Giao hàng" component={WaiterHomeScreen} />
       </Drawer.Navigator>
     );
   }
